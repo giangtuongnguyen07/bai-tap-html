@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo form và các điều khiển trên form</title>
+</head>
+<body>
+
+    <form id="formDangNhap">
+        <h2 align="center" style="color: #8B0000;">Đăng nhập</h2>
+        <table border="1" align="center" cellpadding="5" cellspacing="0" bgcolor="#E6F2FF">
+            <tr>
+                <td>Mã người dùng:</td>
+                <td><input type="text" id="txtUser"></td>
+            </tr>
+            <tr>
+                <td>Mật khẩu:</td>
+                <td><input type="password" id="txtPass"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="button" value="Đồng ý" onclick="hienThiUser()">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <div id="lblKetQua" style="color: blue; font-weight: bold;"></div>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        function hienThiUser() {
+            var user = document.getElementById("txtUser").value;
+            document.getElementById("lblKetQua").innerText = user;
+        }
+    </script>
+
+</body>
+</html>
